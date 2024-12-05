@@ -1,0 +1,203 @@
+.form {
+    & > :not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    form {
+        & > :not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    // .form__item
+
+    &__item {
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-radius: 2px;
+            border: 1px solid $stroke;
+
+            transition: border-color 0.3s ease 0s;
+
+            &::placeholder {
+                color: inherit;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: $black;
+                }
+            }
+        }
+
+        input {
+            height: 70px;
+
+            @media (max-width: 1024px) {
+                height: 60px;
+            }
+
+            @media (max-width: 425px) {
+                height: 50px;
+            }
+        }
+
+        textarea {
+            resize: none;
+            height: 140px;
+
+            @media (max-width: 1024px) {
+                height: 100px;
+            }
+        }
+
+        &._error input,
+        &._error textarea {
+            color: red;
+            box-shadow: 0 0 1px 1px red;
+        }
+
+        &._error span {
+            color: red !important;
+        }
+    }
+
+    // .form__item
+
+    &__row {
+        display: flex;
+        gap: 15px;
+
+        .form__item {
+            @media (min-width: 769px) {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+
+    // .form__bottom
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        gap: 15px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+
+        & > div,
+        button {
+            width: 100%;
+        }
+
+        span {
+            max-width: 280px;
+            width: 100%;
+            font-size: 12px;
+            color: rgba($color: $black, $alpha: 0.7);
+
+            a {
+                color: $black;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                @media (any-hover: none) {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    // .form-white
+
+    &-white {
+        .form__item {
+            input,
+            textarea {
+                background-color: rgba($color: $white, $alpha: 0.15);
+                color: $white;
+                border: 1px solid rgba($color: $white, $alpha: 0.15);
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        border-color: $white;
+                    }
+                }
+            }
+        }
+
+        .form__bottom span {
+            color: rgba($color: $white, $alpha: 0.5);
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.wpcf7-response-output {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+}
+
+form.submitting {
+    pointer-events: none;
+    position: relative;
+
+    &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $blue, $alpha: 0.5);
+        border-radius: 8px;
+    }
+}
+
+.wpcf7-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+
+pre {
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.qty-btn * {
+    pointer-events: none;
+}
+
+.wpcf7-form ._btn div {
+    position: relative;
+}
+
+.wpcf7-form ._btn div input {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    pointer-events: all;
+}

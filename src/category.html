@@ -1,0 +1,482 @@
+@@include('./html/head.html', {
+"title":"Категория",
+})
+
+@@include('./html/header.html', {
+"class":"_sticky",
+})
+
+<main>
+
+    <section class="section pages-hero ">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="breadcrumbs breadcrumbs-white">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Главная</span>
+                            </a>
+                            <div>-</div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>Каталог</span>
+                            </a>
+                            <div>-</div>
+                        </li>
+                        <li>
+                            <span>Настенные Сплит-системы</span>
+                        </li>
+                    </ul>
+                </div>
+                <h1>Настенные Сплит-системы</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="filters-area">
+        <div class="_container">
+            <div class="grid">
+                <div class="filter-fast filter-brand">
+                    <div class="select-input _multiple">
+                        <span data-id="1">БРЕНД</span>
+                        <svg width="8" height="6" viewBox="0 0 8 6">
+                            <use xlink:href='img/svg/icons.svg#link-arrow' />
+                        </svg>
+                        <div class="select">
+                            <div class="select-body">
+                                <label data-id="vestel" for="select-brend-vestel">
+                                    Vestel <input type="checkbox" id="select-brend-vestel" value="vestel">
+                                </label>
+                                <label data-id="gurgen" for="select-brend-gurgen">
+                                    gurgen <input type="checkbox" id="select-brend-gurgen" value="gurgen">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-fast filter-price">
+                    <div class="select-input">
+                        <label data-id="1">Цена</label>
+                        <svg width="8" height="6" viewBox="0 0 8 6">
+                            <use xlink:href='img/svg/icons.svg#link-arrow' />
+                        </svg>
+                        <div class="select">
+                            <div class="select-body">
+                                <div class="range" data-min="18900" data-max="181900" data-step="100">
+                                    <div class="range-slider"></div>
+                                    <div class="range-output">
+                                        <div class="range-min"><ins>18 900</ins> ₽</div>
+                                        <div class="range-max"><ins>181 900</ins> ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="filters-area__filter" data-open-filter>
+                    <img src="img/icons/open-filters.svg" alt="">
+                </button>
+                <div class="filter-fast filter-sort">
+                    <div class="select-input ">
+                        <span data-id="0">
+                            Сначала новые </span>
+                        <svg width="8" height="6" viewBox="0 0 8 6">
+                            <use xlink:href="img/svg/icons.svg#link-arrow">
+                            </use>
+                        </svg>
+                        <div class="select">
+                            <div class="select-body">
+                                <label data-id="0">
+                                    <a href="?orderby=date" data-sort="date">Сначала новые</a>
+                                </label>
+                                <label data-id="1">
+                                    <a href="?orderby=price" data-sort="price">По цене ↑</a>
+                                </label>
+                                <label data-id="2">
+                                    <a href="?orderby=price-desc" data-sort="price-desc">По цене ↓</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="active-filters">
+                <div class="active-filters__count">16 товаров
+                </div>
+                <div class="active-filters__body">
+                    <button class="reset-filters _hide" data-reset-filters>Сбросить фильтры</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section products _pages-products " data-pagenumlink="http://localhost:4040/category.html" data-category="18">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__bottom">
+                    <div class="grid">
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" class="product-card">
+                            <div class="product-card__top">
+                                <div class="product-card__name">
+                                    <h3>НАСТЕННЫЕ СПЛИТ-СИСТЕМЫ</h3>
+                                    <span>88 770 ₽</span>
+                                </div>
+                                <div class="_labels">
+                                    <label class="new">new</label>
+                                    <label class="sale">-30%</label>
+                                </div>
+                            </div>
+                            <div class="product-card__image">
+                                <img src="@img/prod-card.png" alt="">
+                            </div>
+                            <div class="product-card__bottom">
+                                <div>
+                                    <img src="@img/icons/sound.svg" alt="">
+                                    <span>21 дБ</span>
+                                </div>
+                                <div>
+                                    <img src="@img/icons/square.svg" alt="">
+                                    <span>41 м²</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <nav class="woocommerce-pagination">
+                        <ul class="page-numbers">
+                            <li><span aria-current="page" class="page-numbers current">1</span></li>
+                            <li><a class="page-numbers"
+                                    href="https://climat.test-yeremyan.site/product-category/kondiczionery/napolno-potolochnye-kondiczionery/page/2/?orderby=price-desc">2</a>
+                            </li>
+                            <li><a class="next page-numbers"
+                                    href="https://climat.test-yeremyan.site/product-category/kondiczionery/napolno-potolochnye-kondiczionery/page/2/?orderby=price-desc"><svg
+                                        width="18" height="15" viewBox="0 0 18 15">
+                                        <use xlink:href="img/svg/icons.svg#arrow-right"></use>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

@@ -1,0 +1,97 @@
+.catalog-page {
+    @media (max-width: 1024px) {
+        border-bottom: 0;
+    }
+
+    h3 {
+        @include adaptive-value("font-size", 30, 18, 1);
+        margin-bottom: 30px;
+        cursor: pointer;
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    nav {
+        & > ul {
+            display: flex;
+            flex-direction: column;
+
+            & > :not(:last-child) {
+                @include adaptive-value("margin-bottom", 75, 32, 1);
+                padding-bottom: 75px;
+                border-bottom: 1px solid $stroke;
+
+                @media (max-width: 1024px) {
+                    padding-bottom: 35px;
+                }
+            }
+
+            & > li {
+                ul {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 5px;
+
+                    @media (max-width: 1024px) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    @media (max-width: 768px) {
+                        grid-template-columns: 1fr;
+                    }
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+
+                        border: 1px solid $stroke;
+                        gap: 15px;
+                        transition: border-color 0.3s ease 0s;
+
+                        @media (any-hover: hover) {
+                            &:hover {
+                                border-color: $black;
+                            }
+                        }
+
+                        a {
+                            @include adaptive-value("font-size", 20, 14, 1);
+                            font-weight: 500;
+                            transition: transform 0.3s ease 0s;
+                            position: relative;
+                            padding: 25px;
+
+                            @media (max-width: 768px) {
+                                padding: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > li > a {
+                margin-bottom: 25px;
+                @include adaptive-value("font-size", 50, 20, 1);
+                display: block;
+
+                @media (max-width: 728px) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        button {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}

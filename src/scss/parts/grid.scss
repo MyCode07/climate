@@ -1,0 +1,37 @@
+.grid {
+    display: grid;
+
+    // .grid-4
+
+    &-4 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        a {
+            display: block;
+        }
+    }
+}
+
+.video-svg {
+    position: relative;
+
+    svg {
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include adaptive-value("width", 60, 35, 1);
+    }
+}

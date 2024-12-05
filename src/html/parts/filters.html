@@ -1,0 +1,120 @@
+<div class="filter _fixed">
+    <div class="_container">
+        <div class="filter-top">
+            <h2>Фильтры</h2>
+            <button data-close-filter>
+                <svg width="16" height="16" viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.0004 1.02523L14.9752 0L8.0002 6.97477L1.02503 0L0 1.02523L6.97517 8L0 14.9748L1.02503 16L8.0002 9.02523L14.9752 16L16.0004 14.9748L9.02562 8L16.0004 1.02523Z"
+                        fill="#fff" />
+                </svg>
+            </button>
+        </div>
+        <form method="POST" id="product-fitler-form" action="#" class="grid">
+
+            <div class="filter-item">
+                <h3>Бренд</h3>
+                <div class="filter-item__grid">
+                    <label for="brend-vestel">
+                        <input type="checkbox" id="brend-vestel" name="brend" value="Vestel" hidden="">
+                        <span>Vestel</span>
+                    </label>
+                    <label for="brend-gurgen">
+                        <input type="checkbox" id="brend-gurgen" name="brend" value="gurgen" hidden="">
+                        <span>gurgen</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <h3>Цвет</h3>
+                <div class="filter-item__grid">
+                    <label for="czvet-belyj">
+                        <input type="checkbox" id="czvet-belyj" name="czvet" value="Белый" hidden="">
+                        <span>Белый</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <h3>Компрессор</h3>
+                <div class="filter-item__grid">
+                    <label for="kompressor-invertornyj">
+                        <input type="checkbox" id="kompressor-invertornyj" name="kompressor" value="Инверторный"
+                            hidden="">
+                        <span>Инверторный</span>
+                    </label>
+                    <label for="kompressor-obychnyj">
+                        <input type="checkbox" id="kompressor-obychnyj" name="kompressor" value="Обычный" hidden="">
+                        <span>Обычный</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <h3>Площадь, м2</h3>
+                <div class="filter-item__grid">
+                    <label for="ploshad-1218-m2">
+                        <input type="checkbox" id="ploshad-1218-m2" name="ploshad" value="12-18 м2" hidden="">
+                        <span>12~18 м2</span>
+                    </label>
+                    <label for="ploshad-1623-m2">
+                        <input type="checkbox" id="ploshad-1623-m2" name="ploshad" value="16-23 м2" hidden="">
+                        <span>16~23 м2</span>
+                    </label>
+                    <label for="ploshad-2435-m2">
+                        <input type="checkbox" id="ploshad-2435-m2" name="ploshad" value="24-35 м2" hidden="">
+                        <span>24~35 м2</span>
+                    </label>
+                    <label for="ploshad-3247">
+                        <input type="checkbox" id="ploshad-3247" name="ploshad" value="32-47" hidden="">
+                        <span>32~47</span>
+                    </label>
+                    <label for="ploshad-916-m2">
+                        <input type="checkbox" id="ploshad-916-m2" name="ploshad" value="9-16 м2" hidden="">
+                        <span>9~16 м2</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <h3>Управление Wi-Fi</h3>
+                <div class="filter-item__grid">
+                    <label for="upravlenie-wi-fi-wi-fi-vstroennyj">
+                        <input type="checkbox" id="upravlenie-wi-fi-wi-fi-vstroennyj" name="upravlenie-wi-fi"
+                            value="Wi-Fi встроенный" hidden="">
+                        <span>Wi-Fi встроенный</span>
+                    </label>
+                    <label for="upravlenie-wi-fi-wi-fi-opczionalno">
+                        <input type="checkbox" id="upravlenie-wi-fi-wi-fi-opczionalno" name="upravlenie-wi-fi"
+                            value="Wi-Fi опционально" hidden="">
+                        <span>Wi-Fi опционально</span>
+                    </label>
+                    <label for="upravlenie-wi-fi-net">
+                        <input type="checkbox" id="upravlenie-wi-fi-net" name="upravlenie-wi-fi" value="Нет" hidden="">
+                        <span>Нет</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <h3>Цена</h3>
+                <div class="range" data-min="18900" data-max="181900" data-step="100">
+                    <div class="range-slider">
+                    </div>
+                    <div class="range-output">
+                        <div class="range-min" data-value="18900"><ins>18&nbsp;900</ins> ₽</div>
+                        <div class="range-max" data-value="181900"><ins>181&nbsp;900</ins> ₽</div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="min_price" name="min_price" value="18900" data-value="18900">
+            <input type="hidden" id="max_price" name="max_price" value="181900" data-value="181900">
+            <input type="hidden" id="orderby" name="orderby" value="date">
+        </form>
+        <div class="filter-actions">
+            <button class="_btn _btn-blue" data-close-filter apply-filters>
+                <div>применить</div>
+            </button>
+            <button class="_btn _btn-border _btn-border-stroke" data-close-filter data-reset-filters apply-filters>
+                <div>сбросить</div>
+            </button>
+        </div>
+    </div>
+</div>

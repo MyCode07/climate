@@ -1,0 +1,151 @@
+@@include('./html/head.html', {
+"title":"Корзина",
+})
+
+@@include('./html/header.html', {
+"class":"_sticky",
+})
+
+<main>
+
+    <section class="section pages-hero">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="breadcrumbs breadcrumbs-white">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Главная</span>
+                            </a>
+                            <div>-</div>
+                        </li>
+                        <li>
+                            <span>Корзина</span>
+                        </li>
+                    </ul>
+                </div>
+                <h1>Корзина</h1>
+                <p class="basket-count"><label>В коризне —</label><span data-cart-count>6</span><label>позиции</label>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="go-to-order">
+        <div class="_container">
+            <div class="cart-order__total">
+                <h3>Итого</h3>
+                <span><label>131 990</label><i> ₽</i></span>
+            </div>
+            <button class="_btn _btn-blue">
+                <div>Оформить заказ</div>
+            </button>
+        </div>
+    </div>
+    <section class="section cart">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="cart-table">
+                    <div class="cart-table__left">
+                        <div class="cart-items">
+                            <div class="cart-item">
+                                <div class="cart-item__body">
+                                    <div class="cart-item__left">
+                                        <a href="" class="cart-item__img">
+                                            <img src="img/2.png" alt="">
+                                        </a>
+                                        <a class="cart-item__title" href="">Cплит-система Daikin FTXJ20MW/RXJ20M9
+                                            Emura</a>
+                                        <button class="cart-item__delete">Удалить</button>
+                                        <div class="services-box">
+                                            <label for="kabel" class="checkbox-label">
+                                                <input id="kabel" name="service" type="checkbox"
+                                                    value="Премиум кабель-канал (до 1 м.)">
+                                                <span class="checkbox"></span>
+                                                <p class="value">Премиум кабель-канал (до 1 м.) <span>4 000 руб.</span>
+                                                </p>
+                                            </label>
+                                            <label for="zashita" class="checkbox-label">
+                                                <input id="zashita" name="service" type="checkbox"
+                                                    value="Защитный козырек">
+                                                <span class="checkbox"></span>
+                                                <p class="value">Защитный козырек <span>4 000 руб.</span></p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="cart-item__price">
+                                        <div class="amount">
+                                            <span>131 990 ₽</span>
+                                        </div>
+                                        <div class="quantity">
+                                            <button class="minus">
+                                                <svg viewBox="0 0 15 1">
+                                                    <line y1="0.5" x2="15" y2="0.5"></line>
+                                                </svg>
+                                            </button>
+                                            <input type="number" value="1" min="1" max="100" step="1">
+                                            <button class="plus">
+                                                <svg viewBox="0 0 15 15">
+                                                    <path d="M0 7.5H15M7.5 0L7.5 15"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <span class="cart-item__total"><span>131 990</span> ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-table__right">
+                        <div class="cart-order">
+                            <div class="cart-order__total">
+                                <h3>Итого</h3>
+
+                                <span><label>131 990</label><i> ₽</i></span>
+                                <button class="cart-order__close">
+                                    <svg width="20" height="20" viewBox="0 0 20 20">
+                                        <use xlink:href='img/svg/icons.svg#close' />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="cart-order__bottom">
+                                <div class="form form-blue">
+                                    <form action="">
+                                        <div class="form__row">
+                                            <div class="form__item" data-required>
+                                                <input type="text" name="name" placeholder="Имя *">
+                                            </div>
+                                            <div class="form__item" data-required>
+                                                <input type="text" name="phone" class="_mask-phone"
+                                                    placeholder="Телефон *">
+                                            </div>
+                                        </div>
+                                        <div class="form__item" data-required>
+                                            <input type="text" name="address" placeholder="Адрес доставки *">
+                                        </div>
+                                        <div class="form__item">
+                                            <textarea name="msg" placeholder="Премечание"></textarea>
+                                        </div>
+                                        <div class="form__bottom">
+                                            <button class="_btn _btn-blue">
+                                                <div>Оформить заказ</div>
+                                            </button>
+                                            <span>Нажимая на кнопку Оформить заказ я даю согласие на обработку <a
+                                                    href="">персональных
+                                                    данных</a> и
+                                                <a href="">политикa конфиденциальности.</a>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

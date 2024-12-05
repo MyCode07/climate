@@ -1,0 +1,207 @@
+.hero {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__body
+
+    &__body {
+        position: relative;
+        z-index: 2;
+
+        @include adaptive-value("padding-top", 630, 400, 1);
+        @include adaptive-value("padding-bottom", 40, 20, 1);
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 50px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
+
+    h1 {
+        color: $white;
+    }
+
+    ._btn {
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+    }
+}
+
+.hero-home {
+    ._btn {
+        @media (any-hover: hover) {
+            &:hover {
+                div {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+}
+
+.bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    picture,
+    video,
+    iframe,
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 25%;
+        height: 100%;
+    }
+}
+
+.pages-hero {
+    background-color: $black;
+    color: $white;
+
+    &.section {
+        @include adaptive-value(" margin-bottom", 100, 25, 1);
+    }
+
+    .section__body {
+        padding-bottom: 50px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0;
+        @include adaptive-value("padding-top", 175, 125, 1);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    h1 {
+        font-weight: 500;
+        @include adaptive-value("font-size", 64, 26, 1);
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    .subtitle {
+        max-width: 500px;
+        @include adaptive-value("font-size", 22, 14, 1);
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+    .quick-buttons {
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 425px) {
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        li {
+            @media (max-width: 425px) {
+                flex: 1 1 auto;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2em;
+            min-height: 100%;
+
+            border: 1px solid rgba($color: $white, $alpha: 0.1);
+            @include adaptive-value("font-size", 16, 12, 1);
+            padding: 0.5em 1.2em;
+            transition: all 0.3s ease 0s;
+
+            svg {
+                width: 0.8em;
+                fill: currentColor;
+                flex: 0 0 auto;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .basket-count {
+        label {
+            opacity: 0.6;
+        }
+        span {
+            margin: 0 5px;
+            @include adaptive-value("font-size", 44, 18, 1);
+        }
+    }
+}
+
+.hero-mb-0 {
+    margin: 0 !important;
+}
+
+.gallery-page {
+    .gallery__tabs {
+        width: 100%;
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.error-main {
+    background-color: $black;
+}
+
+.error-hero {
+    @include adaptive-value("margin-bottom", 100, 0, 1);
+
+    background-color: $black;
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    ._btn {
+        width: 100%;
+
+        @media (any-hover: hover) {
+            &:hover {
+                div {
+                    color: $black;
+                }
+            }
+        }
+    }
+}

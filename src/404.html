@@ -1,0 +1,45 @@
+@@include('./html/head.html', {
+"title":"Ошибка 404",
+})
+
+@@include('./html/header.html', {
+"class":"_sticky",
+})
+
+<main class="error-main">
+    <section class="pages-hero error-hero">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="breadcrumbs breadcrumbs-white">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>Главная</span>
+                            </a>
+                            <div>-</div>
+                        </li>
+                        <li>
+                            <span>404</span>
+                        </li>
+                    </ul>
+                </div>
+                <h1>Ничего не найдено</h1>
+                <a href="/" class="_btn _btn _btn-border">
+                    <div>вернуться на главную</div>
+                    <div class="arrow">
+                        <svg width="18" height="15" viewBox="0 0 18 15">
+                            <use xlink:href="img/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('./html/footer.html', {
+"class":"error-footer",
+})
+
+
+@@include('./html/scripts.html')

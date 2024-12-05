@@ -1,0 +1,118 @@
+.accordion {
+    & > :not(:last-child) {
+        border-bottom: 1px solid $stroke;
+        margin-bottom: 25px;
+    }
+
+    // .accordion__item
+
+    &__item {
+        &[data-open] {
+            .accordion__item-content {
+                grid-template-rows: 1fr;
+            }
+            .accordion__item-title {
+                svg {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            ._btn {
+                margin: 25px 0;
+            }
+        }
+
+        // .accordion__item-title
+
+        &-title {
+            width: 100%;
+            cursor: pointer;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            cursor: pointer;
+
+            color: $blue;
+            @include adaptive-value("font-size", 24, 16, 1);
+
+            font-weight: 500;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: $blue;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    svg {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: currentColor;
+                transition: all 0.3s ease 0s;
+            }
+
+            * {
+                pointer-events: none;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    svg {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: currentColor;
+                transition: all 0.3s ease 0s;
+            }
+        }
+
+        // .accordion__item-content
+
+        &-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s;
+            color: $blue;
+
+            // .accordion__item-content-height
+
+            &-height {
+                overflow: hidden;
+
+                // ol {
+                //     & > :not(:last-child) {
+                //         border-bottom: 1px solid $stroke;
+                //     }
+
+                //     li {
+                //         padding: 20px 0;
+
+                //         @media (max-width: 768px) {
+                //             padding: 15px 0;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+
+    // .accordion__open
+
+    &__open {
+    }
+
+    ._btn {
+        width: 100%;
+    }
+}

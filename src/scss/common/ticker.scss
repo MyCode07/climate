@@ -1,0 +1,22 @@
+._ticker {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: -1;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .ticker-text {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    // ._ticker-text
+
+    &-text {
+        display: flex;
+        justify-content: space-between;
+    }
+}
